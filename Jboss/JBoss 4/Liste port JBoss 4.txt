@@ -1,0 +1,34 @@
+Documentation extraite de la page web suivante : 
+http://www.guismai.fr/2013/03/jboss-java-net-bindexception-address-already-in-use-jvm_bind/
+
+Dans le cadre de l'utilisation d'un JBoss 4, ci-dessous, la liste des ports utilisés et les services associés :
+
+Port	Type	Service Name
+1098	TCP	jboss:service=Naming
+1099	TCP	jboss:service=Naming
+3873	TCP	jboss.remoting:type=Connector,name=DefaultEjb3Connector,handler=ejb3
+4444	TCP	jboss:service=invoker,type=jrmp (legacy 4.0.x invoker)
+4445	TCP	jboss:service=invoker,type=pooled (legacy 4.0.x invoker)
+4446	TCP	jboss.remoting:service=Connector,transport=socket (EJB2 beans in AS/EAP 4.2+)
+8009	TCP	jboss.web:service=WebServer
+8080	TCP	jboss.web:service=WebServer
+8083	TCP	jboss:service=WebService
+8090	TCP	jboss.mq:service=InvocationLayer,type=OIL
+8092	TCP	jboss.mq:service=InvocationLayer,type=OIL2
+8093	TCP	jboss.mq:service=InvocationLayer,type=UIL2
+
+Ci-dessous, la liste des ports utilisés et les fichiers de conf associés :
+
+Port	Type	Service Descriptor
+1098	TCP	conf/jboss-service.xml
+1099	TCP	conf/jboss-service.xml
+3873	TCP	deploy/ejb3.deployer/META-INF/jboss-service.xml
+4444	TCP	conf/jboss-service.xml
+4445	TCP	conf/jboss-service.xml
+4446	TCP	conf/jboss-service.xml
+8009	TCP	deploy/jbossweb-tomcat41.sar/META-INF/jboss-service.xml
+8080	TCP	deploy/jbossweb-tomcat41.sar/META-INF/jboss-service.xml
+8083	TCP	conf/jboss-service.xml
+8090	TCP	deploy/jms/oil-service.xml
+8092	TCP	deploy/jms/oil2-service.xml
+8093	TCP	deploy/jms/uil2-service.xml
