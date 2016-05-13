@@ -1,0 +1,1 @@
+mvn  deploy:deploy-file -Dfile=name.jar -DgroupId=com.company.name -DartifactId=name -Dversion=version -Dpackaging=jar -DgeneratePom=true  -DrepositoryId=nexusCOMPANY -Durl=http://nexus.url.fr:8081/content/repositories/releases
