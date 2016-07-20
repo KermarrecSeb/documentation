@@ -1,0 +1,10 @@
+# Connaitre les version de java disponible sur OSX
+/usr/libexec/java_home -V
+Matching Java Virtual Machines (3):
+    1.7.0_05, x86_64:	"Java SE 7"	/Library/Java/JavaVirtualMachines/1.7.0.jdk/Contents/Home
+    1.6.0_41-b02-445, x86_64:	"Java SE 6"	/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home
+    1.6.0_41-b02-445, i386:	"Java SE 6"	/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home
+
+## Définir la version de Java version 1.6
+$ /usr/libexec/java_home -v 1.6
+/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home
